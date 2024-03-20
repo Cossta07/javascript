@@ -3,10 +3,16 @@ Como você pode chamar uma função de retorno de chamada em
 JavaScript?
 */
 
-// Definindo a função de retorno de chamada
-function minhaFuncaoDeRetorno() {
-    console.log("A função de retorno de chamada foi chamada!");
+// Definindo uma função de retorno de chamada
+function minhaFuncaoDeRetorno(argumento) {
+    console.log("exemplo " + exemplo);
 }
 
-// Chamando a função de retorno de chamada
-minhaFuncaoDeRetorno();
+// Função principal que aceita uma função de retorno de chamada como argumento
+function funcaoPrincipal(funcaoDeRetorno) {
+    // Chamando a função de retorno de chamada passando um argumento
+    funcaoDeRetorno("exemplo");
+}
+
+// Chamando a função principal e passando a função de retorno de chamada como argumento
+funcaoPrincipal(minhaFuncaoDeRetorno);
